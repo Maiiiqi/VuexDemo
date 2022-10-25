@@ -28,7 +28,12 @@
       </Category>
     </div>
     <button @click="sendReq">点我访问php</button> -->
+    <!-- <Graphics/> -->
     <Count/>
+    <br/>
+    <hr/>
+    <br/>
+    <Person/>
   </div>
 </template>
 
@@ -39,13 +44,15 @@ import Search from './components/Search.vue'
 import List from './components/List.vue'
 import Category from './components/Category.vue'
 import Count from './components/Count.vue'
+import Person from './components/Person.vue'
+import Graphics from './components/Graphics.vue'
 // 引入axios
 import axios from 'axios'
 // 引入创建好的$store对象
 import store from './store/'
 export default {
   name: 'App',
-  components: {Student, Search, List, Category, Count},
+  components: {Student, Search, List, Category, Count, Graphics, Person},
   methods: {
     sendReq(){
       axios.get('./php/oms.php').then(
